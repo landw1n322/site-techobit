@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ТехноБыт — Интернет-магазин бытовой техники</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__inner">
+        <a href="#" class="logo">
+          <span class="logo__icon"></span>
+          <span>Техно<span class="yellow">Быт</span></span>
+        </a>
+
+        <button class="burger" id="burger">☰</button>
+
+        <nav class="nav" id="nav">
+          <a href="#hero">Главная</a>
+          <a href="#catalog">Каталог</a>
+          <a href="#contacts">Контакты</a>
+
+          <button class="favorite-btn">
+            <img src="images/heart.png" alt="Избранное" class="btn-icon" />
+            <span id="favorite-count">0</span>
+          </button>
+
+          <button class="cart-btn">
+            <img src="images/cart.png" alt="Корзина" class="btn-icon" />
+            <span id="cart-count">0</span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero__content">
+          <h1>Интернет-магазин бытовой техники</h1>
+
+          <p>
+            Телевизоры, холодильники, стиральные машины, пылесосы и другая
+            техника для вашего дома.
+          </p>
+
+          <a href="#catalog" class="hero__btn"> Смотреть каталог </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog" id="catalog">
+      <div class="container">
+        <h2 class="section-title">Каталог техники</h2>
+
+        <input
+          type="text"
+          id="search"
+          class="search"
+          placeholder="Поиск товара..."
+        />
+
+        <div class="categories">
+          <button class="category-btn active" data-category="all">Все</button>
+          <button class="category-btn" data-category="tv">Телевизоры</button>
+          <button class="category-btn" data-category="wash">
+            Стиральные машины
+          </button>
+          <button class="category-btn" data-category="fridge">
+            Холодильники
+          </button>
+          <button class="category-btn" data-category="vacuum">Пылесосы</button>
+        </div>
+
+        <div class="products" id="products">
+          <div class="product-card" data-category="tv">
+            <img src="images/tv1.jpg" alt="TV" />
+
+            <h3>Телевизор Samsung</h3>
+            <p>43", 4K UltraHD, 3840x2160</p>
+
+            <span class="price">30 799 ₽</span>
+
+            <div class="card-buttons">
+              <button class="add-cart">В корзину</button>
+              <button class="add-favorite">❤</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="tv">
+            <img src="images/tv2.jpg" alt="TV" />
+
+            <h3>Телевизор LG</h3>
+            <p>532", FullHD, 1920x1080</p>
+
+            <span class="price">26 999 ₽ </span>
+
+            <div class="card-buttons">
+              <button class="add-cart">В корзину</button>
+              <button class="add-favorite">❤</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="tv">
+            <img src="images/tv3.jpg" alt="TV" />
+
+            <h3>Телевизор Xiaomi</h3>
+            <p>43", 4K UltraHD, 3840x2160</p>
+
+            <span class="price">23 999 ₽</span>
+
+            <div class="card-buttons">
+              <button class="add-cart">В корзину</button>
+              <button class="add-favorite">❤</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="tv">
+            <img src="images/tv4.jpg" alt="TV" />
+
+            <h3>Телевизор DEXP</h3>
+            <p>50", 4K UltraHD, 3840x2160</p>
+
+            <span class="price">24 699 ₽</span>
+
+            <div class="card-buttons">
+              <button class="add-cart">В корзину</button>
+              <button class="add-favorite">❤</button>
+            </div>
+          </div>
+          <div class="product-card" data-category="wash">
+            <img src="images/wash1.jpg" alt="Wash" />
+
+            <h3>Стиральная машина Samsung</h3>
+            <p>до 6.5 кг, Тихий режим</p>
+
+            <span class="price">29 999 ₽</span>
+
+            <div class="card-buttons">
+              <button class="add-cart">В корзину</button>
+              <button class="add-favorite">❤</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="wash">
+            <img src="images/wash2.jpg" alt="Wash" />
+
+            <h3>Стиральная машина LG</h3>
+            <p>до 6 кг, Нержавеющая сталь</p>
+
+            <span class="price">32 999 ₽</span>
+
+            <div class="card-buttons">
+              <button class="add-cart">В корзину</button>
+              <button class="add-favorite">❤</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="wash">
+            <img src="images/wash3.jpg" alt="Wash" />
+
+            <h3>Стиральная машина Haier</h3>
+            <p>Eдо 5 кг, Тихий инвертор</p>
+
+            <span class="price">39 999 ₽</span>
+
+            <div class="card-buttons">
+              <button class="add-cart">В корзину</button>
+              <button class="add-favorite">❤</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="wash">
+            <img src="images/wash4.jpg" alt="Wash" />
+
+            <h3>Стиральная машина DEXP</h3>
+            <p>до 6 к, Отложенный старт</p>
+
+            <span class="price">20 999 ₽</span>
+
+            <div class="card-buttons">
+              <button class="add-cart">В корзину</button>
+              <button class="add-favorite">❤</button>
+            </div>
+          </div>
+          <div class="product-card" data-category="fridge">
+            <img src="images/fridge1.jpg" alt="Fridge" />
+
+            <h3>Холодильник Aceline</h3>
+            <p>Компактный, 85 л</p>
+
+            <span class="price">10 799 ₽</span>
+
+            <div class="card-buttons">
+              <button class="add-cart">В корзину</button>
+              <button class="add-favorite">❤</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="fridge">
+            <img src="images/fridge2.jpg" alt="Fridge" />
+
+            <h3>Холодильник LG</h3>
+            <p>Морозильник, 384 л</p>
+
+            <span class="price">49 999 ₽</span>
+
+            <div class="card-buttons">
+              <button class="add-cart">В корзину</button>
+              <button class="add-favorite">❤</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="fridge">
+            <img src="images/fridge3.jpg" alt="Fridge" />
+
+            <h3>Холодильник Haier</h3>
+            <p>Морозильник, 346 л</p>
+
+            <span class="price">49 999 ₽</span>
+
+            <div class="card-buttons">
+              <button class="add-cart">В корзину</button>
+              <button class="add-favorite">❤</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="fridge">
+            <img src="images/fridge4.jpg" alt="Fridge" />
+
+            <h3>Холодильник DEXP</h3>
+            <p>Морозильник, 262 л</p>
+
+            <span class="price">59 999 ₽</span>
+
+            <div class="card-buttons">
+              <button class="add-cart">В корзину</button>
+              <button class="add-favorite">❤</button>
+            </div>
+          </div>
+          <div class="product-card" data-category="vacuum">
+            <img src="images/vacuum1.jpg" alt="Vacuum" />
+
+            <h3>Пылесос Samsung</h3>
+            <p>2000 Вт, 1.3 л</p>
+
+            <span class="price">6 999 ₽</span>
+
+            <div class="card-buttons">
+              <button class="add-cart">В корзину</button>
+              <button class="add-favorite">❤</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="vacuum">
+            <img src="images/vacuum2.jpg" alt="Vacuum" />
+
+            <h3>Пылесос Karcher</h3>
+            <p>1100 Вт, 0.9 л</p>
+
+            <span class="price">12 699 ₽</span>
+
+            <div class="card-buttons">
+              <button class="add-cart">В корзину</button>
+              <button class="add-favorite">❤</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="vacuum">
+            <img src="images/vacuum3.jpg" alt="Vacuum" />
+
+            <h3>Пылесос Philips</h3>
+            <p>2000 Вт, 2 л</p>
+
+            <span class="price">19 999 ₽</span>
+
+            <div class="card-buttons">
+              <button class="add-cart">В корзину</button>
+              <button class="add-favorite">❤</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="vacuum">
+            <img src="images/vacuum4.jpg" alt="Vacuum" />
+
+            <h3>Пылесос DEXP</h3>
+            <p>2200 Вт, 2 л</p>
+
+            <span class="price">4 699 ₽</span>
+
+            <div class="card-buttons">
+              <button class="add-cart">В корзину</button>
+              <button class="add-favorite">❤</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="modal" id="order-modal">
+      <div class="modal-content">
+        <button class="close-modal">✖</button>
+        <h2>Оформление заказа</h2>
+
+        <div class="order-form">
+          <input id="name" placeholder="Имя" />
+          <input id="surname" placeholder="Фамилия" />
+          <input id="phone" placeholder="Номер телефона" />
+          <input id="address" placeholder="Адрес доставки" />
+          <button id="submit-order">Подтвердить заказ</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer" id="contacts">
+      <div class="container">
+        <div class="footer__inner">
+          <div>
+            <h3>ТехноБыт</h3>
+            <p>Интернет-магазин бытовой техники</p>
+            <p>Качественная техника для вашего дома</p>
+          </div>
+
+          <div>
+            <h3>Контакты</h3>
+            <p>📧 technobyt@mail.ru</p>
+            <p>📞 +7 (999) 222-33-44</p>
+            <p>📍 г. Омск, ул. Новая, 15</p>
+          </div>
+
+          <div>
+            <h3>Режим работы</h3>
+            <p>🕐 Пн-Пт: 9:00 - 21:00</p>
+            <p>🕐 Сб-Вс: 10:00 - 19:00</p>
+            <p>🕐 Без перерыва</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 ТехноБыт — Все права защищены</p>
+        </div>
+      </div>
+    </footer>
+    <div class="modal" id="cart-modal">
+      <div class="modal-content">
+        <h2>Корзина</h2>
+        <div id="cart-items"></div>
+        <button class="close-modal">✖</button>
+      </div>
+    </div>
+    <div class="modal" id="fav-modal">
+      <div class="modal-content">
+        <h2>Избранное</h2>
+        <div id="fav-items"></div>
+        <button class="close-modal">✖</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
