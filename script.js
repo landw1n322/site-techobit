@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // отображение корзины
   function renderCart() {
     if (cart.length === 0) {
-      cartItemsBox.innerHTML = '<div class="empty-cart">🛒 Корзина пуста</div>';
+      cartItemsBox.innerHTML = '<div class="empty-cart">Корзина пуста</div>';
       return;
     }
 
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function renderFav() {
     if (fav.length === 0) {
       favItemsBox.innerHTML =
-        '<div class="empty-cart">❤️ Нет избранных товаров</div>';
+        '<div class="empty-cart"> Нет избранных товаров</div>';
       return;
     }
 
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .map(
         (item, index) => `
       <div class="cart-item">
-        <div class="cart-title">❤️ ${escapeHtml(item)}</div>
+        <div class="cart-title"> ${escapeHtml(item)}</div>
         <button class="delete" onclick="window.removeFav(${index})">✖</button>
       </div>
     `
