@@ -225,23 +225,37 @@ document.addEventListener('DOMContentLoaded', () => {
     renderFav();
   };
 
-  // отправка заказа
+  // отправка заказа с валидацией
   document.getElementById('submit-order').addEventListener('click', () => {
     const name = document.getElementById('name').value.trim();
     const surname = document.getElementById('surname').value.trim();
     const phone = document.getElementById('phone').value.trim();
     const address = document.getElementById('address').value.trim();
 
-    if (!name || !phone) {
-      alert('❌ Пожалуйста, заполните имя и номер телефона!');
+    // Простая валидация
+    if (!name || name.length < 2) {
+      alert('❌ Имя должно содержать минимум 2 символа!');
       return;
     }
 
-    if (!address) {
-      alert('❌ Пожалуйста, укажите адрес доставки!');
+    if (!surname || surname.length < 2) {
+      alert('❌ Фамилия должна содержать минимум 2 символа!');
       return;
     }
 
+    const phoneRegex = /^(\+7|8)?[\s-]?(\()?(\d{3})(\))?[\s-]?(\d{3})[\s-]?(\d{2})[\s-]?(\d{2})$/;
+    if (!phoneRegex.test(phone.replace(/\s/g, ''))) {
+      alert('❌ Некорректный номер телефона!');
+      return;
+    }
+
+    if (!address || address.length < 10) {
+      alert('❌ Адрес должен быть минимум 10 символов!');
+      return;
+    }
+
+    alert(`✅ Спасибо за заказ, ${name}! Мы отправим подтверждение на номер ${phone}`);
+    
     cart = [];
     updateUI();
     renderCart();
